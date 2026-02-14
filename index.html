@@ -51,7 +51,6 @@
         .loader-brand p { font-size: 0.5rem; color: var(--poster-orange); letter-spacing: 0.3em; margin-bottom: 4px; text-transform: uppercase; font-weight: bold; }
         .loader-brand h1 { font-family: 'Bangers', cursive; font-size: 2.2rem; color: white; text-shadow: 0 0 15px var(--poster-pink); letter-spacing: 0.05em; margin: 0; }
 
-        /* NORMAL CLOCKWISE REVOLVING ANIMATION - 8 EMOJIS */
         .emoji-orbit { position: absolute; width: 100%; height: 100%; animation: rotateOrbit 12s linear infinite; }
         @keyframes rotateOrbit { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         
@@ -82,7 +81,6 @@
         .loading-bar-fill { height: 100%; width: 0%; background: var(--poster-pink); animation: loadProgress 3s linear forwards; }
         @keyframes loadProgress { to { width: 100%; } }
 
-        /* --- DASHBOARD STYLES --- */
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: var(--deep-indigo);
@@ -157,7 +155,6 @@
 
         @keyframes moveDancers { from { background-position: 0 bottom; } to { background-position: 1000px bottom; } }
 
-        /* --- CURVED LOGO BADGE --- */
         .university-logo-badge {
             background: white;
             padding: 10px 25px;
@@ -169,7 +166,6 @@
             transition: transform 0.3s ease;
         }
 
-        /* --- BANGERS FONT BRANDING --- */
         .crest-brand-title {
             font-family: 'Bangers', cursive; 
             font-weight: 400;
@@ -265,11 +261,15 @@
             transition: all 0.4s ease;
         }
         .glass-card:hover { border-color: var(--poster-pink); transform: translateY(-5px); }
+        
+        /* Custom Scrollbar for Rules Modal */
+        .rule-scroll::-webkit-scrollbar { width: 5px; }
+        .rule-scroll::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); }
+        .rule-scroll::-webkit-scrollbar-thumb { background: var(--poster-pink); border-radius: 10px; }
     </style>
 </head>
 <body class="selection:bg-pink-500 selection:text-white">
 
-    <!-- Preloader -->
     <div id="preloader">
         <div class="hud-container">
             <div class="loader-brand">
@@ -292,15 +292,12 @@
 
     <div id="cursor-glow"></div>
 
-    <!-- Navbar -->
     <nav class="fixed top-0 w-full z-50 glass border-b border-white/5 px-4 md:px-8 h-20 flex justify-end items-center">
-        <!-- BIGGER REGISTER BUTTON -->
         <a id="nav-register-btn" href="#" target="_blank" class="bg-gradient-to-r from-pink-600 to-orange-600 px-8 py-3 rounded-full font-black text-xs md:text-sm tracking-widest uppercase active:scale-95 transition-all shadow-[0_0_20px_rgba(255,26,255,0.4)] hover:shadow-[0_0_30px_rgba(255,26,255,0.6)]">
             Register Now
         </a>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero-festival-bg pt-28 pb-24 md:pb-32 px-4 md:px-6 text-center flex flex-col items-center">
         <div id="particles-container"></div>
         <div class="dancer-layer"></div>
@@ -330,7 +327,6 @@
                 </div>
             </div>
 
-            <!-- Countdown Cards -->
             <div class="flex justify-center gap-2 md:gap-5 mb-16 reveal w-full overflow-hidden">
                 <div class="timer-card p-3 md:p-6 rounded-[1rem] min-w-[65px] md:min-w-[110px]">
                     <span id="days" class="block text-xl md:text-4xl font-black mb-1 text-white">00</span>
@@ -363,7 +359,6 @@
         </div>
     </section>
 
-    <!-- Arena Section -->
     <section id="events" class="py-16 md:py-20 px-4 md:px-6 max-w-7xl mx-auto w-full">
         <div class="flex flex-col items-center mb-12 md:mb-16 text-center reveal">
             <h2 class="text-white text-3xl sm:text-5xl md:text-7xl font-[900] tracking-tighter uppercase italic" style="font-family: 'Syncopate', sans-serif; color: var(--poster-pink); text-shadow: 0 0 20px rgba(255, 26, 255, 0.2);">The Arena</h2>
@@ -376,7 +371,6 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6" id="games-grid"></div>
     </section>
 
-    <!-- Sponsors Section -->
     <section id="sponsors" class="py-16 md:py-24 px-4 md:px-6 max-w-6xl mx-auto border-t border-white/5 w-full text-center">
         <div class="flex flex-col items-center mb-12 md:mb-16 reveal">
             <h2 class="section-header text-2xl md:text-5xl text-white tracking-tighter opacity-90 uppercase">Our Partners</h2>
@@ -409,7 +403,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="py-16 md:py-20 bg-black border-t border-white/10 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col text-left w-full mb-16">
@@ -441,7 +434,7 @@
                 
                 <div class="flex flex-col items-center md:items-end gap-6 order-1 md:order-2">
                     <div class="flex flex-col items-center md:items-end gap-4">
-                        <h3 class="section-header text-white text-[10px] tracking-[0.4em] opacity-60 uppercase">SVGU Socials</h3>
+                        <h3 class="section-header text-white text-[10ydyvpx] tracking-[0.4em] opacity-60 uppercase">SVGU Socials</h3>
                         <div class="flex gap-4">
                             <a href="https://www.linkedin.com/school/sri-chimanbhai-patel-institute-of-management-and-r/?originalSubdomain=in" target="_blank" class="p-2.5 bg-white/5 rounded-full hover:bg-pink-600 transition-all hover:-translate-y-1 border border-white/5"><i data-lucide="linkedin" class="w-4 h-4 md:w-5 md:h-5"></i></a>
                             <a href="https://www.instagram.com/cpimr_mba/?hl=en" target="_blank" class="p-2.5 bg-white/5 rounded-full hover:bg-pink-600 transition-all hover:-translate-y-1 border border-white/5"><i data-lucide="instagram" class="w-4 h-4 md:w-5 md:h-5"></i></a>
@@ -454,14 +447,14 @@
         </div>
     </footer>
 
-    <!-- Game Modal -->
     <div id="gameModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 md:p-6 bg-black/98 backdrop-blur-2xl">
         <div class="relative glass-card max-w-lg w-full rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-10 border-pink-500/40 shadow-2xl">
             <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors"><i data-lucide="x"></i></button>
             <div class="text-center">
                 <div class="inline-block p-3 md:p-4 bg-pink-500/10 rounded-2xl mb-6 md:mb-8"><i data-lucide="book-open" class="text-pink-500 w-8 h-8 md:w-10 md:h-10"></i></div>
-                <h2 id="modal-title" class="section-header text-2xl md:text-3xl mb-4 tracking-tighter uppercase italic px-4 text-white"></h2>
-                <div class="bg-white/5 rounded-[1.2rem] md:rounded-[1.5rem] p-4 md:p-6 mb-8 text-left max-h-[200px] md:max-h-[250px] overflow-y-auto rule-scroll border border-white/5">
+                <h2 id="modal-title" class="section-header text-2xl md:text-3xl mb-2 tracking-tighter uppercase italic px-4 text-white"></h2>
+                <div id="modal-info" class="mb-4 text-xs font-bold text-orange-400 tracking-widest uppercase"></div>
+                <div class="bg-white/5 rounded-[1.2rem] md:rounded-[1.5rem] p-4 md:p-6 mb-8 text-left max-h-[300px] overflow-y-auto rule-scroll border border-white/5">
                     <ul id="modal-rules" class="text-[11px] md:text-xs text-gray-300 space-y-2 md:space-y-3 list-disc pl-5 leading-relaxed font-medium"></ul>
                 </div>
                 <a id="modal-register-btn" href="#" target="_blank" class="w-full inline-block bg-gradient-to-r from-pink-600 to-purple-700 py-3 md:py-4 rounded-[0.8rem] md:rounded-[1rem] font-bold text-xs md:text-sm uppercase tracking-widest text-center shadow-lg">Register Now</a>
@@ -470,19 +463,14 @@
     </div>
 
     <script>
-        // --- 1. PASTE YOUR GOOGLE FORM LINK HERE ---
         const REGISTRATION_LINK = "https://docs.google.com/forms/d/e/1FAIpQLScwT1nC8dzqV26PHjMZbXB-Hwm2FLZ_QYpmTR6tMra-XFqkMw/viewform";
 
-        // Update all registration buttons to use this link
         document.addEventListener('DOMContentLoaded', () => {
             const registerButtons = [
                 document.getElementById('nav-register-btn'),
                 document.getElementById('modal-register-btn')
             ];
-            
-            registerButtons.forEach(btn => {
-                if(btn) btn.href = REGISTRATION_LINK;
-            });
+            registerButtons.forEach(btn => { if(btn) btn.href = REGISTRATION_LINK; });
         });
 
         const handleReveal = () => {
@@ -501,23 +489,168 @@
             }, 800);
         };
 
-        window.addEventListener('DOMContentLoaded', () => {
-            setTimeout(startWebsite, 3000);
-        });
+        window.addEventListener('DOMContentLoaded', () => { setTimeout(startWebsite, 3000); });
 
         const games = [
-            { name: "REEL FOR REASON", icon: "video", rules: ["Theme: Social Awareness.", "Duration: 30-60 secs.", "Original content only."] },
-            { name: "ECHO CHAIN", icon: "music", rules: ["Team size: 4 members.", "Communication challenge.", "No gadgets allowed."] },
-            { name: "GENZ CLIP BILTZ", icon: "camera", rules: ["Raw footage provided.", "On-site editing limit.", "CapCut/Premiere allowed."] },
-            { name: "TRADE TITANS", icon: "briefcase", rules: ["Marketing pitch battle.", "Product presentation.", "Negotiation round."] },
-            { name: "TEAM TANGLE", icon: "users", rules: ["Logic solving tasks.", "Coordination challenge.", "Time-based scoring."] },
-            { name: "STARTUP HUSTLE", icon: "rocket", rules: ["Business idea pitching.", "Investor deck (10 slides max).", "Scalability focus."] },
-            { name: "TALENT SHOW", icon: "star", rules: ["Max stage time: 4 mins.", "Any artistic category.", "Bring own props."] },
-            { name: "ROADIES", icon: "shield", rules: ["National level E-Sports.", "Mobile only.", "Strict fair play policy."] },
-            { name: "TREASURE HUNT", icon: "search", rules: ["Campus-wide clue chase.", "No personal vehicles.", "Speed and accuracy."] },
-            { name: "MOBILE MANIA", icon: "gamepad-2", rules: ["National level E-Sports.", "Mobile only.", "Strict fair play policy."] },
-            { name: "BUSINESS QUIZ", icon: "help-circle", rules: ["Corporate topics, Brands, Tech.", "Buzzer finale.", "Team participation."] },
-            { name: "DASHTAC", icon: "trophy", rules: ["Sports management simulation.", "Tactical gameplay.", "Budget allocation."] }
+            { 
+                name: "Trade Titans", 
+                time: "10:00 AM - 12:00 PM", 
+                venue: "Computer Lab", 
+                icon: "briefcase", 
+                rules: [
+                    "Team Composition: 2 members.",
+                    "Round 1: 30-min MCQ elimination quiz.",
+                    "Round 2: 90-min live trading simulation.",
+                    "4 teams advance to final round with hypothetical Rs. 10,00,000.",
+                    "Trade stocks in NIFTY 50; max Rs. 3.00 lakhs per script.",
+                    "Compulsory to square off (Intraday) at game end.",
+                    "Winner based on highest profit."
+                ] 
+            },
+            { 
+                name: "Team Tangle", 
+                time: "11:30 AM - 12:45 PM", 
+                venue: "MBA CR 3", 
+                icon: "users", 
+                rules: [
+                    "Team Composition: 6 members.",
+                    "Substitution not permitted once game starts.",
+                    "Game conducted in 3 rounds with hidden twists revealed at start.",
+                    "No pulling, jerking, dragging, lifting, or carrying players.",
+                    "Participant may stop game by saying 'STOP' if uncomfortable."
+                ] 
+            },
+            { 
+                name: "Roadies", 
+                time: "10:00 AM - 12:00 PM", 
+                venue: "Ground", 
+                icon: "shield", 
+                rules: [
+                    "Team Composition: 5 members.",
+                    "Minimum time completion wins.",
+                    "Partners cannot be exchanged after registration.",
+                    "Arguing with management leads to disqualification.",
+                    "College ID is mandatory."
+                ] 
+            },
+            { 
+                name: "Biz Brain", 
+                time: "1:00 PM - 2:00 PM", 
+                venue: "MBA CR 7", 
+                icon: "help-circle", 
+                rules: [
+                    "Team Composition: 2-3 members; Max 10 teams.",
+                    "2 Rounds: MCQs, Rapid Fire, Symbols, Jingles.",
+                    "Scoring: +10 for correct, -5 for wrong.",
+                    "Use of 'Buzzer' app on one team member's phone required.",
+                    "External help (phones/internet) strictly prohibited."
+                ] 
+            },
+            { 
+                name: "Echo Chain", 
+                time: "11:00 AM - 12:00 PM", 
+                venue: "BBA Block Top Floor", 
+                icon: "music", 
+                rules: [
+                    "Team Composition: 5 members.",
+                    "Round 1: Sprint - pass short phrase quickly.",
+                    "Round 2 Phase I: Correct spelling of complex word (e.g. Hippopotomonstrosesquippedaliophobia).",
+                    "Round 2 Phase II: Retain long tongue twister in order.",
+                    "Message whispered ONLY once; listener cannot ask to repeat.",
+                    "Looking back or using hand signals/lip-reading is prohibited."
+                ] 
+            },
+            { 
+                name: "Dashtac", 
+                time: "10:00 AM - 11:30 AM", 
+                venue: "Ground", 
+                icon: "trophy", 
+                rules: [
+                    "Team Composition: 4 players per team.",
+                    "Physical 3x3 grid Tic Tac Toe.",
+                    "Red vs Green: players run to grid to place symbols.",
+                    "Win by placing 3 symbols in a row (H, V, or D).",
+                    "Second round played in case of a draw."
+                ] 
+            },
+            { 
+                name: "Startup Hustle", 
+                time: "11:00 AM - 12:30 PM", 
+                venue: "MBA CR 7", 
+                icon: "rocket", 
+                rules: [
+                    "Team Composition: 3 - 5 members.",
+                    "10-minute pitch for business idea.",
+                    "Buzzer sounds after 7 minutes as a reminder.",
+                    "Judging on innovation, negotiation, and time management."
+                ] 
+            },
+            { 
+                name: "GenZ Clip Blitz", 
+                time: "12:00 PM - 1:00 PM", 
+                venue: "MBA CR 2", 
+                icon: "camera", 
+                rules: [
+                    "Team Composition: 3 - 4 members.",
+                    "1-2 minute pitch + 30-second ad clip.",
+                    "Ad must be exactly 30 seconds with a catchy slogan.",
+                    "Genres: Drama, Comedy, or Dance (announced on spot).",
+                    "Themes: Everyday Problems or Expectation vs Reality.",
+                    "Products given on the spot[cite: 77]."
+                ] 
+            },
+            { 
+                name: "Treasure Hunt", 
+                time: "12:30 PM - 2:00 PM", 
+                venue: "Center Stage", 
+                icon: "search", 
+                rules: [
+                    "Team Composition: 5 members; report 15 mins early.",
+                    "Round 1 elimination followed by campus-wide hunt.",
+                    "Mobile phones/internet prohibited unless permitted by volunteer.",
+                    "Teams must stay together throughout[cite: 303]."
+                ] 
+            },
+            { 
+                name: "Mobile Mania", 
+                time: "1:00 PM - 2:00 PM", 
+                venue: "MBA CR 1", 
+                icon: "gamepad-2", 
+                rules: [
+                    "BGMI Squad: Map Erangel (TPP); Squad of 4.",
+                    "Points: 1 per elimination; Chicken Dinner = 10.",
+                    "BGMI TDM: 4v4 Knockout on Warehouse Map.",
+                    "Hacks, emulators, iPad, and teaming strictly prohibited.",
+                    "Network and device issues are player responsibility."
+                ] 
+            },
+            { 
+                name: "Reel for Reason", 
+                time: "1:00 PM - 2:00 PM", 
+                venue: "Computer Lab", 
+                icon: "video", 
+                rules: [
+                    "Theme: My Campus, My Pride.",
+                    "Team Composition: 2 - 5 members.",
+                    "Duration: 30 to 60 seconds.",
+                    "Must be original content in English, Hindi, or regional language.",
+                    "Upload on public Instagram/YouTube before the event."
+                ] 
+            },
+            { 
+                name: "Talent Show", 
+                time: "10:00 AM - 2:00 PM", 
+                venue: "On Stage", 
+                icon: "star", 
+                rules: [
+                    "Categories: Singing, Dancing, Fashion Show, Drama, Comedy, Poetry.",
+                    "Time Limit: Max 5 mins (Fashion: 10-15 mins).",
+                    "Music must be submitted in MP3 format 48 hours prior.",
+                    "Singing: Live only; no lip-syncing; max 6 members.",
+                    "Dancing: Max 10 members; no dangerous stunts.",
+                    "Fashion Show: Open theme; no inappropriate outfits."
+                ] 
+            }
         ];
 
         const grid = document.getElementById('games-grid');
@@ -527,6 +660,7 @@
             card.style.transitionDelay = `${i * 0.05}s`;
             card.onclick = () => {
                 document.getElementById('modal-title').innerText = g.name;
+                document.getElementById('modal-info').innerText = `${g.time} | ${g.venue}`;
                 const r = document.getElementById('modal-rules');
                 r.innerHTML = '';
                 g.rules.forEach(rule => { const li = document.createElement('li'); li.innerText = rule; r.appendChild(li); });
@@ -539,6 +673,7 @@
                     <i data-lucide="${g.icon}" class="text-pink-500 group-hover:text-white w-6 h-6 md:w-8 md:h-8"></i>
                 </div>
                 <h3 class="section-header text-[11px] md:text-sm group-hover:text-pink-500 transition-all tracking-tight font-bold italic uppercase">${g.name}</h3>
+                <p class="text-[8px] text-white/40 font-bold uppercase mt-2">${g.venue}</p>
                 <div class="w-6 md:w-8 h-1 bg-white/10 rounded-full mt-3 md:mt-4 group-hover:bg-pink-500 transition-all"></div>
             `;
             grid.appendChild(card);
@@ -568,7 +703,6 @@
         const container = document.getElementById('particles-container');
         for (let i = 0; i < 40; i++) {
             const dot = document.createElement('div');
-            dot.className = 'glow-dot';
             const size = Math.random() * 2 + 2 + 'px';
             dot.style.width = size; dot.style.height = size;
             dot.style.left = Math.random() * 100 + 'vw'; dot.style.top = Math.random() * 100 + 'vh';
@@ -578,4 +712,3 @@
     </script>
 </body>
 </html>
-
